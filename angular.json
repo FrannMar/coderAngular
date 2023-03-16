@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angularCoder": {
+    "clase-02-practica": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-coder",
+            "outputPath": "dist/clase-02-practica",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -25,9 +25,12 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -60,10 +63,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angularCoder:build:production"
+              "browserTarget": "clase-02-practica:build:production"
             },
             "development": {
-              "browserTarget": "angularCoder:build:development"
+              "browserTarget": "clase-02-practica:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +74,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angularCoder:build"
+            "browserTarget": "clase-02-practica:build"
           }
         },
         "test": {
@@ -94,8 +97,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "b2d5a77b-790e-4584-ac70-20b2cf07df8c"
   }
 }
